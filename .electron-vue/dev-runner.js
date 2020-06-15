@@ -65,6 +65,7 @@ function startRenderer () {
       {
         contentBase: path.join(__dirname, '../'),
         quiet: true,
+        hot: true, // default enabel hot module replacement
         before (app, ctx) {
           app.use(hotMiddleware)
           ctx.middleware.waitUntilValid(() => {
